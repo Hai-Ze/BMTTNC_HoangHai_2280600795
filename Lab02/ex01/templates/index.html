@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành An toàn thông tin nâng cao</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #e6f0fa 0%, #f4f7fa 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            padding: 3rem 0;
+            max-width: 700px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        }
+        .logo-img {
+            width: 20%;
+            max-width: 150px;
+            margin-bottom: 2rem;
+        }
+        .title {
+            font-weight: 700;
+            color: #1a3c6e;
+            margin-bottom: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .cipher-section h5 {
+            font-weight: 600;
+            color: #007bff;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .cipher-list {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .btn-custom {
+            transition: all 0.3s ease;
+            border-radius: 10px;
+            padding: 1rem;
+            font-weight: 500;
+            font-size: 1.1rem;
+            border: 2px solid #007bff;
+            color: #007bff;
+            background: transparent;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            max-width: 300px; /* Giới hạn chiều rộng nút */
+        }
+        .btn-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);
+            background: #007bff;
+            color: white;
+        }
+        .btn-custom::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: all 0.4s ease;
+        }
+        .btn-custom:hover::after {
+            left: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://thumb.ac-illust.com/e2/e2cbae08aee6ed3c5fa742b33e936831_t.jpeg" alt="HUTECH" class="logo-img d-block mx-auto">
+        <h4 class="title text-center">BÀI THỰC HÀNH BẢO MẬT THÔNG TIN NÂNG CAO</h4>
+        <div class="cipher-section">
+            <h5>Mật mã cổ điển</h5>
+            <ul class="list-unstyled cipher-list">
+                <li class="mb-3 d-flex justify-content-center">
+                    <a href="/caesar.html" class="btn btn-custom">Mật mã Caesar</a>
+                </li>
+                <li class="mb-3 d-flex justify-content-center">
+                    <a href="/vigenere.html" class="btn btn-custom">Mật mã Vigenere</a>
+                </li>
+                <li class="mb-3 d-flex justify-content-center">
+                    <a href="/playfair.html" class="btn btn-custom">Mật mã Playfair</a>
+                </li>
+                <li class="mb-3 d-flex justify-content-center">
+                    <a href="/railfence.html" class="btn btn-custom">Mật mã Rail Fence</a>
+                </li>
+                <li class="mb-3 d-flex justify-content-center">
+                    <a href="/transposition.html" class="btn btn-custom">Mật mã Transposition</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
