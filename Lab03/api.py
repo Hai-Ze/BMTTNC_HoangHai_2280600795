@@ -9,7 +9,7 @@ rsa_cipher = RSACipher()
 @app.route('/api/rsa/generate_keys', methods=['GET'])
 def rsa_generate_keys():
     rsa_cipher.generate_keys()
-    return jsonify({'message': 'Keys generated successfully'})
+    return jsonify({'message': 'Đã tạo khóa thành công'})
 
 @app.route('/api/rsa/encrypt', methods=['POST'])
 def rsa_encrypt():
