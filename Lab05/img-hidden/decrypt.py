@@ -11,14 +11,15 @@ def decode_image(encoded_image_path):
             for color_channel in range(3):
                 binary_message += format(pixel[color_channel], '08b')[-1]
 
-        message = ""
-        for i in range(0, len(binary_message), 8):
-            char = binary_message[i:i+8]
-            if char == '1111111111111110':  # Kết thúc thông điệp
-                break
+    message = ""
+    for i in range(0, len(binary_message) - 15):  # Giảm 16 bit kết thúc
+        char = binary_message[i:i+8]
+        if binary_message[i:i+16] == '1111111111111110':  # Kiểm tra 16 bit kết thúc
+            break
+        if len(char) == 8:  # Đảm bảo chỉ lấy byte đầy đủ
             message += chr(int(char, 2))
 
-        return message
+    return message
 
 def main():
     if len(sys.argv) != 2:
